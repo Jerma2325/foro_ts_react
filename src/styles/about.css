@@ -1,0 +1,33 @@
+.about {
+  align-items: center;
+  position: relative;
+  top: 106px;
+  background-color: var(--white);
+}
+.about h2 {
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.about p {
+  margin: 1rem;
+  font-size: larger;
+}
+.about a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 7rem 1rem 7rem;
+  padding: 6rem;
+  text-align: center;
+}

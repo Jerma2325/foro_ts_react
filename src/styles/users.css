@@ -1,0 +1,56 @@
+.users-list {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  align-items: center;
+}
+
+.user-container {
+  display: flex;
+
+  min-width: 400px;
+  max-width: 500px;
+  top: 110px;
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 25px;
+  box-shadow: var(--box-shadow);
+  border-radius: 4px;
+}
+
+.user-content {
+  flex-grow: 1;
+  padding: 8px;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.user-content {
+  display: flex;
+
+  justify-content: flex-start;
+  flex-shrink: 3;
+}
+
+.user-picture {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.user-picture img {
+  border-radius: 3px;
+}
+
+.user-show-profile {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 2px 3px;
+  border-radius: 3px;
+}
+.user-email {
+  color: rgb(46, 46, 234);
+}

@@ -1,24 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header/header";
+import "./styles/main.css";
+import Sidebar from "./components/sidebar/sidebar";
+import PostList from "./pages/home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import About from "./pages/about";
+import Todos from "./pages/todos";
+import Users from "./pages/users";
+import UserPg from "./pages/userPg";
+import Albums from "./pages/albums";
+import Photos from "./pages/photos";
+import GoUpBtn from "./components/upBtn/upbtn";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Sidebar />
+        <Routes>
+          <Route
+            path="/"
+            element={<PostList />}
+          />
+          <Route
+            path="/about"
+            element={<About />}
+          />
+          <Route
+            path="/todos"
+            element={<Todos />}
+          />
+          <Route
+            path="/users"
+            element={<Users />}
+          />
+          <Route
+            path="/users/:userId"
+            element={<UserPg />}
+          />
+          <Route
+            path="/users/:userId/posts"
+            element={<PostList />}
+          />
+          <Route
+            path="/users/:userId/todos"
+            element={<Todos />}
+          />
+          <Route
+            path="/users/:userId/albums"
+            element={<Albums />}
+          />
+          <Route
+            path="/albums/:albumId/photos"
+            element={<Photos />}
+          />
+        </Routes>
+        <GoUpBtn />
+      </Router>
     </div>
   );
 }
