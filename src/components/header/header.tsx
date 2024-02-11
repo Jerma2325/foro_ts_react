@@ -12,22 +12,21 @@ const handleLogin = () => {
 const Header: FC = () => {
   return (
     <header className="header">
-      <div className="header-container">
-        <div className="header-row">
-          <Link
-            to="/"
-            className="logo-link"
-          >
+      <div className="header-row">
+        <Link
+          to="/"
+          className="logo-link"
+        >
+          <div className="logo-container">
             <img
               src={logo}
               alt="logo"
               className="logo"
             />
-          </Link>
-          <p className="text-container">Silk Road</p>
-
-          <LoginButton onLogin={handleLogin} />
-        </div>
+            <p className="text-container">Silk Road</p>
+          </div>
+        </Link>
+        <LoginButton onLogin={handleLogin} />
       </div>
     </header>
   );

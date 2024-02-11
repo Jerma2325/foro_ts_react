@@ -30,6 +30,7 @@ const GoUpBtn: FC = () => {
     <button
       className={`go-up-btn ${fadeClass}`}
       onClick={topFunction}
+      style={{ display: isVisable ? "block" : "none" }}
     >
       <AiOutlineArrowUp />
     </button>

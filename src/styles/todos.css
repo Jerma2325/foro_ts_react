@@ -7,29 +7,136 @@
 .todo-container {
   display: flex;
   width: 65%;
-  max-width: 500px;
+  max-width: 600px;
   top: 110px;
   position: relative;
   margin: auto;
   margin-top: 15px;
+  max-height: 185px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
 }
 
 .todo-content {
   flex-grow: 1;
-  padding: 10px;
+  padding: 20px;
   background-color: #f5f5f5;
-  border-radius: 5px;
+  border-radius: 15px;
+}
+.todo-info {
+  display: flex;
+
+  flex-direction: column;
+  margin: 20px 10px;
 }
 .todo-title {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1.2rem;
+
   margin-bottom: 10px;
 }
 
 .todo-completed {
   color: green;
+  font-size: 1.2rem;
 }
 
 .todo-notcompleted {
   color: red;
+  font-size: 1.2rem;
+}
+
+.todo-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.todo-btn {
+  padding: 5px 10px;
+  border: black 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--white);
+  color: var(--black);
+  width: 20%;
+}
+
+.todo-btns button:hover {
+  background-color: var(--accent-hoover);
+}
+.h2-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.todo-btns a {
+  width: 100%;
+}
+
+.stack-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 600px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  row-gap: 10px;
+  column-gap: 10px;
+  font-size: 1.3rem;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 300px;
+}
+
+.btn-group button {
+  padding: 5px 10px;
+  border: black 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: var(--white);
+  color: var(--black);
+  width: 60%;
+}
+
+.name-edit,
+.compl-edit {
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  display: flex;
+  max-height: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.input_input__lg,
+.label {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+}
+.input_input_box {
+  display: flex;
+  justify-content: center;
+
+  width: auto;
+  height: 30px;
+}
+.name-edit label {
+  padding-right: 30px;
 }

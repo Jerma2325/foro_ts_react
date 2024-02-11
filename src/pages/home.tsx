@@ -2,6 +2,11 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import "./../styles/posts.css";
 import PhotosApi from "../helpers/photosApi/photosApi";
 import { Link, useParams } from "react-router-dom";
+import {
+  AiOutlineComment,
+  AiOutlineFieldNumber,
+  AiOutlineLike,
+} from "react-icons/ai";
 
 interface Post {
   id: number;
@@ -125,6 +130,20 @@ const PostList: React.FC = () => {
                   photoId={3}
                   bigImg={true}
                 />
+              </div>
+              <div className="post-additional-info">
+                <div className="N1">
+                  <AiOutlineFieldNumber />
+                  <p>{post.id}</p>
+                </div>
+                <div className="N2">
+                  <AiOutlineComment />
+                  <p>5</p>
+                </div>
+                <div className="N3">
+                  <AiOutlineLike />
+                  <p>{Math.floor(Math.random() * 100)}</p>
+                </div>
               </div>
             </div>
           </Link>

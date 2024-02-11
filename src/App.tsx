@@ -11,6 +11,8 @@ import UserPg from "./pages/userPg";
 import Albums from "./pages/albums";
 import Photos from "./pages/photos";
 import GoUpBtn from "./components/upBtn/upbtn";
+import SinglePost from "./pages/post";
+import Todo from "./pages/todoPg";
 
 function App() {
   return (
@@ -54,6 +56,22 @@ function App() {
           <Route
             path="/albums/:albumId/photos"
             element={<Photos />}
+          />
+          <Route
+            path="/albums"
+            element={<Albums />}
+          />
+          <Route
+            path="/photos"
+            element={<Photos />}
+          />
+          <Route
+            path="/post/:postId"
+            element={<SinglePost />}
+          />
+          <Route
+            path="/todos/:todoId"
+            element={<Todo />}
           />
         </Routes>
         <GoUpBtn />
